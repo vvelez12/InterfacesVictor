@@ -1,0 +1,45 @@
+div.encabezado{
+    width: auto;
+    height: 4em;
+    background: linear-gradient(to right,#7D04FF,#2A7DFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    margin-right: auto;
+}
+.barra{
+    margin-right: auto;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.barra span{
+  
+    padding: 1em;
+}
+
+body {
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+}
+
+.barra p
+{
+    margin-left: 1em;
+}
+.piedepagina
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4em;
+    background: linear-gradient(to right,#7D04FF,#2A7DFF);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#redes img {
+    margin-right: 10px; 
+}
