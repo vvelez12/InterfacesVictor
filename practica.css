@@ -24,12 +24,62 @@ body {
     padding: 0; /* Elimina el relleno predeterminado del cuerpo */
 }
 
-.barra p
-{
+.cuerpo{
+    background-color: white; 
+    padding: 20px; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.botones {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los botones */
+}
+
+.boton {
+    width: auto; 
+    height: auto; 
+    background-color: #7D04FF; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 10px; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #2A7DFF;
+}
+
+
+#letra{
+
+    font-size:xx-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 200px; 
+    display: flex;
+    align-items: center; 
+    @media screen and (max-width: 768px) {
+        margin-right: 0; 
+        margin-bottom: 10px;
+    }
+
+
+}
+
+
+.barra p{
     margin-left: 1em;
 }
-.piedepagina
-{
+.piedepagina{
     position: absolute;
     bottom: 0;
     width: 100%;
