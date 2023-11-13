@@ -22,16 +22,20 @@ div.encabezado{
 body {
     margin: 0; /* Elimina el margen predeterminado del cuerpo */
     padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+    background-color: #F7F7F7;
 }
 
 .cuerpo{
     background-color: white; 
-    padding: 20px; 
+    padding: 10px; 
     margin: 0 auto; 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    height: 100%;
+    position: relative;
 
 }
 
@@ -51,7 +55,6 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-right: 10px; 
     border: none;
-    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -59,6 +62,44 @@ body {
     background-color: #2A7DFF;
 }
 
+
+
+#contenedor{
+    background-color: white; 
+    padding: 10px; 
+    margin: 0 auto; 
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 80%;
+
+  }
+
+#contenedor > div {
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 48%;
+    margin: 7px;
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+div > img{
+
+    width: 100%;
+    height: 50%;
+    display: block;
+}
+
+b{
+font-size:large;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+div > p{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
 
 #letra{
 
@@ -75,12 +116,38 @@ body {
 
 }
 
+p.pagina{
+    text-align: right;
+    padding-right: 30px;  
+    background-color: white; 
+    padding: 10px; 
+    margin: 0 auto; 
+    width: 80%;
+    height: 100%;
+    position: relative;
+  }
+  
+
+
+.pasar {
+    border: 1px solid #2A7DFF; /*anchura, estilo y color borde*/
+    padding: 5px; /*espacio alrededor texto*/
+    background-color: #2A7DFF;
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    margin:0px;
+    }
+
+    .pasar:hover {
+        background-color: #7D04FF; /* Cambia el color a morado cuando el ratón pasa por encima */
+    }
 
 .barra p{
     margin-left: 1em;
 }
 .piedepagina{
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 4em;
