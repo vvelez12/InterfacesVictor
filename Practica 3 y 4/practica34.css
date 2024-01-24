@@ -1,0 +1,289 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7;
+}
+
+/* Estilos para pantallas grandes (mayores a 768px) */
+div.encabezado {
+    width: auto;
+    height: 4em;
+    background: linear-gradient(to right, #7D04FF, #2A7DFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#letra {
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 0; /* Modificado */
+    display: flex;
+    align-items: center;
+    position: relative; /* Modificado */
+    left: 0; /* Modificado */
+    margin-bottom: 10px;
+}
+#logo{
+    margin-right: auto;
+    
+}
+.barra{
+    margin-right: auto;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.barra span{
+  
+    padding: 1em;
+}
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+}
+
+.boton {
+    width: auto;
+    height: auto;
+    background-color: #7D04FF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #2A7DFF;
+}
+
+#contenedor {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#contenedor > div {
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 48%;
+    margin: 7px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+div > img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+b {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div > p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
+
+.piedepagina {
+    bottom: 0;
+    width: 100%;
+    height: 4em;
+    background: linear-gradient(to right, #7D04FF, #2A7DFF);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+p.pagina{
+    text-align: right;
+    padding-right: 30px;  
+    background-color: white; 
+    padding: 10px; 
+    margin: 0 auto; 
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    right: 9.3%;
+  }
+
+.pasar {
+    border: 1px solid #2A7DFF; 
+    padding: 5px; 
+    background-color: #2A7DFF;
+    color: #ffffff; 
+    text-decoration: none;
+    text-transform: uppercase; 
+    font-family: 'Helvetica', sans-serif; 
+    margin:0px;
+
+    }
+
+.pasar:hover {
+        background-color: #7D04FF; 
+    }
+
+#redes img {
+    margin-right: 10px;
+}
+video{
+    width: 300px;
+    height: 226px;
+}
+
+/* Media Queries para pantallas medianas  */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .boton {
+        font-size: 2em;
+    }
+    div > p {
+        font-size: 2em;
+    }
+    #letra {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .barra{
+        font-size: 1em;
+    }
+  
+    video{
+        width: 600px;
+        height: 600px;
+    }
+  }
+
+  
+/* Media Queries para pantallas medianas (hasta 1024px) */
+@media screen and (max-width: 1024px) {
+    #letra {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+  
+    .cuerpo {
+        flex-direction: column;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        margin-bottom: 10px;
+    }
+  
+    #contenedor {
+        flex-direction: column;
+    }
+
+    #contenedor > div {
+        width: 100%;
+    }
+    @media screen and (max-width: 540px) {
+        video{
+            width: 300px;
+            height: 300px;
+        }
+        div.encabezado {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+        
+            
+        }ç
+        div.barra{
+            display: flex;
+            flex-direction: row;
+         
+            
+        }
+}
+
+/* Media Queries para pantallas pequeñas (hasta 480px) */
+@media screen and (max-width: 480px) {
+    div.encabezado {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    
+        
+    }
+    div.barra{
+        display: flex;
+        flex-direction: row;
+     
+        
+    }
+   audio{
+    width: 50%;
+   }
+    .cuerpo {
+        width: 100%;
+    }
+
+    #contenedor {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #contenedor > div {
+        width: 100%;
+    }
+
+    .piedepagina {
+        height: 2.5em;
+    }
+    #redes {
+        height: 2.5em;
+    }
+    video{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 280px){
+    div.encabezado {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    
+        
+    }
+    div.barra{
+        display: flex;
+        flex-direction: column;
+     
+        
+    }
+    video{
+        width: 200px;
+        height: 200px;
+    }
+}}
