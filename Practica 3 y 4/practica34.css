@@ -19,11 +19,11 @@ div.encabezado {
 #letra {
     font-size: xx-large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-right: 0; /* Modificado */
+    margin-right: 0; 
     display: flex;
     align-items: center;
-    position: relative; /* Modificado */
-    left: 0; /* Modificado */
+    position: relative; 
+    left: 0; 
     margin-bottom: 10px;
 }
 #logo{
@@ -49,6 +49,7 @@ div.encabezado {
     padding: 10px;
 }
 
+
 .botones {
     display: flex;
     align-items: center;
@@ -65,10 +66,16 @@ div.encabezado {
     margin-right: 10px;
     border: none;
     cursor: pointer;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+  
 }
 
 .boton:hover {
     background-color: #2A7DFF;
+    width: 10em;
+    height: 5em;
 }
 
 #contenedor {
@@ -124,6 +131,17 @@ p.pagina{
     height: 20%;
     position: absolute;
     right: 9.3%;
+    
+  }
+  @keyframes animacion1 {
+    0%{
+        margin-right: 10%;
+        color: black;
+        font-weight: bold;
+    }
+    100%{
+        margin-left: 0%;
+    }
   }
 
 .pasar {
@@ -135,6 +153,11 @@ p.pagina{
     text-transform: uppercase; 
     font-family: 'Helvetica', sans-serif; 
     margin:0px;
+    animation-name: animacion1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 
     }
 
@@ -199,6 +222,8 @@ video{
     #contenedor > div {
         width: 100%;
     }
+
+
     @media screen and (max-width: 540px) {
         video{
             width: 300px;
