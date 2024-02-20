@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="VíctorVélez_Practica5.css">
+</head>
+<body>
+
+    <!--Pagina principal, botones para iniciar el juego y para mostar instrucciones-->
+<div id="principal">
+  <div id="instrucciones">
+    <h2>Bienvenido al Juego</h2>
+    <p>Tu objetivo es atrapar al objetivo verde.</p>
+    <p>¡Espero que te lo pases genial!</p>
+  </div>
+  <button class="boton" id="mostrarInstrucciones" onclick="mostrar()">Mostrar Instrucciones</button>
+  <button class="boton" id="iniciar" onclick="iniciarJuego()">Iniciar Juego</button>
+</div>
+
+
+<!--Instrucciones-->
+<div id="contenedorInstrucciones">
+    <div id="contenidoInstrucciones">
+      <h2>Instrucciones del Juego</h2>
+      <p>Bienvenido al juego. Tu objetivo es atrapar al objetivo verde moviendo al jugador rojo con las teclas de dirección.</p>
+      <p>Cada vez que atrapes al objetivo, ganarás puntos. El objetivo cambiará de posición después de cada captura.</p>
+      <p>¡Diviértete y trata de conseguir la puntuación más alta!</p>
+      <button class="boton" id="cerrar" onclick="cerrar()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="VíctorVélez_Practica5.js"></script>
+</body>
+</html>
