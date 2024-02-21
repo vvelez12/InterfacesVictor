@@ -4,7 +4,7 @@ body {
   align-items: center; /* Centra verticalmente */
   height: 100vh; /* 100% de la altura de la ventana del navegador */
   margin: 0; /* Elimina el margen predeterminado del body */
-  background-image: url('ch.jpg'); 
+  background-image: url('pattern-1929506_1280.png'); 
   background-size: cover;
 }
 
@@ -69,3 +69,78 @@ body {
         background-color: red;
         color: white;
       }
+
+
+      /* Estilos del juego */
+    #contenedorJuego {
+      display: none;
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border: 1px solid #000;
+      overflow: hidden;
+      background-color: #87CEEB; /* Color de fondo azul claro */
+    }
+
+    #jugador {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      transition: left 0.5s, top 0.5s;
+      
+    }
+
+    #objetivo {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+
+    }
+
+    #puntuacionContenedor {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    #puntuacion {
+      margin-right: 10px;
+    }
+
+    /* Animación de incremento de tamaño */
+    .animacion-incremento {
+      animation: animacionIncremento 0.5s;
+    }
+
+    @keyframes animacionIncremento {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+      100% { transform: scale(1); }
+    }
+
+    /* Estilos de la pantalla de fin de juego */
+    #finJuego {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      color: red;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    #mensaje {
+      background: black;
+      padding: 20px;
+      border-radius: 10px;
+    }
