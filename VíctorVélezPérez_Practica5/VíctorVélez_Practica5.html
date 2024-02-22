@@ -8,6 +8,8 @@
 <body>
 
     <!--Pagina principal, botones para iniciar el juego y para mostar instrucciones-->
+
+    
 <div id="principal">
   <div id="instrucciones">
     <h2>Bienvenido al Juego</h2>
@@ -20,15 +22,16 @@
 
 
 <!--Juego -->
+<div id="puntuacionContenedor">
+  <div id="contadorTiempo"></div>
+  <div id="puntuacion">Puntuación: 0</div>
+</div>
 <div id="contenedorJuego">
   <div >
     <iframe id="jugador" src="https://giphy.com/embed/lhvyCCcFuQFKo" ></iframe>
   </div>
   <div>
     <iframe id="objetivo" src="https://giphy.com/embed/qUAyrJp4VjhqU"></iframe>
-  </div>
-  <div id="puntuacionContenedor">
-    <div id="puntuacion">Puntuación: 0</div>
   </div>
 </div>
 
@@ -46,7 +49,7 @@
     <div id="contenidoInstrucciones">
       <h2>Instrucciones del Juego</h2>
       <p>Bienvenido al juego. Tu objetivo es atrapar a la princesa Zelda moviendo a Mario con las teclas de dirección.</p>
-      <p>Cada vez que atrapes a Zelda, ganarás puntos. Zelda cambiará de posición después de cada captura.</p>
+      <p>Cada vez que atrapes a Zelda, ganarás puntos. Zelda cambiará de posición después de cada captura.Tienes 30 segundos para capturarla todas las veces que puedas.</p>
       <p>¡Diviértete y trata de conseguir la puntuación más alta!</p>
       <button class="boton" id="cerrar" onclick="cerrar()">Cerrar</button>
     </div>

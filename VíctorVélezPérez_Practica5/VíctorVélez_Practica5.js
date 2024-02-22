@@ -42,13 +42,24 @@ function iniciarJuego() {
     }
   });
 
-  // Iniciar temporizador para el fin del juego
-  temporizador = setTimeout(() => {
-    // Mostrar el mensaje de resultado con la puntuación
-    finJuego.style.display = 'flex';
-    document.getElementById('resultado').innerText = `¡Enhorabuena! Has alcanzado una puntuación de ${puntuacion}. ¡Juego terminado!: `;
-  }, 30000);
-
+   // Establecer el tiempo máximo de juego en segundos
+   const tiempoMaximo = 30;
+   let tiempoRestante = tiempoMaximo;
+ 
+   // Actualizar el contador de tiempo cada segundo
+   contadorTiempo.innerText = `Tiempo restante: ${tiempoRestante} s`;
+   temporizador = setInterval(() => {
+     tiempoRestante--;
+     contadorTiempo.innerText = `Tiempo restante: ${tiempoRestante} s`;
+ 
+     // Si se acaba el tiempo, detener el juego
+     if (tiempoRestante <= 0) {
+       clearInterval(temporizador);
+       finJuego.style.display = 'flex';
+       document.getElementById('resultado').innerText = `¡Tiempo agotado! Tu puntuación fue de ${puntuacion}. ¡Juego terminado!`;
+     }
+   }, 1000); // Intervalo de actualización: 1 segundo
+ 
 }
 
 
@@ -145,8 +156,7 @@ function posicionarObjetivo() {
       finJuego.style.display = 'none';
       puntuacion = 0;
 
-      //Reiniciamos el tiempo
-      clearTimeout(temporizador);
+  
       // Reiniciar posición del jugador
       posicionarJugador();
   
