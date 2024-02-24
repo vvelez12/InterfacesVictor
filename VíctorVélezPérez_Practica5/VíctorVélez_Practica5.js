@@ -1,5 +1,41 @@
  let puntuacion = 0;
  
+
+
+ //Web component
+ class Componente extends HTMLElement{
+
+  constructor(){
+    super();
+  }
+
+  connectedCallback(){
+   
+    this.innerHTML= '<h2>Bienvenido al Juego</h2><p>Tu objetivo es que Mario caze a Zelda</p><p>¡Diviertete!</p>';
+   
+  }
+ }
+
+ window.customElements.define("componente-juego", Componente);
+
+
+ 
+ //Web component
+ class Instrucciones extends HTMLElement{
+
+  constructor(){
+    super();
+  }
+
+  connectedCallback(){
+   
+    this.innerHTML= ' <h2>Instrucciones del Juego</h2><p>Bienvenido al juego. Tu objetivo es atrapar a la princesa Zelda moviendo a Mario con las teclas de dirección.</p><p>Cada vez que atrapes a Zelda, ganarás puntos. Zelda cambiará de posición después de cada captura.Tienes 30 segundos para capturarla todas las veces que puedas.</p><p>¡Diviértete y trata de conseguir la puntuación más alta!</p>';
+   
+  }
+ }
+
+ window.customElements.define("instrucciones-juego", Instrucciones);
+
  // Función para mostrar las instrucciones
  
   function mostrar() {

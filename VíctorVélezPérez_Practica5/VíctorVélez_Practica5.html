@@ -12,9 +12,7 @@
     
 <div id="principal">
   <div id="instrucciones">
-    <h2>Bienvenido al Juego</h2>
-    <p>Tu objetivo es que Mario atrape a Zelda.</p>
-    <p>¡Espero que te lo pases genial!</p>
+    <componente-juego></componente-juego>
   </div>
   <button class="boton" id="mostrarInstrucciones" onclick="mostrar()">Mostrar Instrucciones</button>
   <button class="boton" id="iniciar" onclick="iniciarJuego()">Iniciar Juego</button>
@@ -47,10 +45,7 @@
 <!--Instrucciones-->
 <div id="contenedorInstrucciones">
     <div id="contenidoInstrucciones">
-      <h2>Instrucciones del Juego</h2>
-      <p>Bienvenido al juego. Tu objetivo es atrapar a la princesa Zelda moviendo a Mario con las teclas de dirección.</p>
-      <p>Cada vez que atrapes a Zelda, ganarás puntos. Zelda cambiará de posición después de cada captura.Tienes 30 segundos para capturarla todas las veces que puedas.</p>
-      <p>¡Diviértete y trata de conseguir la puntuación más alta!</p>
+      <instrucciones-juego></instrucciones-juego>
       <button class="boton" id="cerrar" onclick="cerrar()">Cerrar</button>
     </div>
   </div>
