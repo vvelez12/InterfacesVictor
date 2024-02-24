@@ -67,23 +67,41 @@ function iniciarJuego() {
 
 // Función para posicionar al jugador en la esquina superior izquierda
 function posicionarJugador() {
+
+  return new Promise((resolve)=>{
+
+  
   const jugador = document.getElementById('jugador');
   jugador.style.left = '0px';
   jugador.style.top = '0px';
+
+  setTimeout(() =>{
+    resolve();
+  },100);
+})
 }
 
 // Función para posicionar al objetivo en una posición aleatoria
 function posicionarObjetivo() {
-  const objetivo = document.getElementById('objetivo');
-  const limiteDerecha = 450;
-  const limiteAbajo = 450;
+  //Esta promesa indica si el objetivo se ha movido correctamente.
+  return new Promise((resolve) => {
+    const objetivo = document.getElementById('objetivo');
+    const limiteDerecha = 450;
+    const limiteAbajo = 450;
 
-  const nuevaIzquierda = Math.random() * limiteDerecha;
-  const nuevaArriba = Math.random() * limiteAbajo;
+    const nuevaIzquierda = Math.random() * limiteDerecha;
+    const nuevaArriba = Math.random() * limiteAbajo;
 
-  objetivo.style.left = nuevaIzquierda + 'px';
-  objetivo.style.top = nuevaArriba + 'px';
+    objetivo.style.left = nuevaIzquierda + 'px';
+    objetivo.style.top = nuevaArriba + 'px';
+
+    
+    setTimeout(() => {
+      resolve();
+    }, 100); 
+  });
 }
+
 
 
  // Función para mover el jugador con las teclas de dirección
@@ -140,7 +158,10 @@ function posicionarObjetivo() {
       puntuacionMostrador.classList.add('animacion-incremento'); // Agregar animación
 
       // Mover el objetivo a una nueva posición aleatoria
-      posicionarObjetivo();
+      posicionarObjetivo()
+  .then(() => {
+    console.log('El objetivo se ha posicionado correctamente.');
+  });
 
       // Remover la clase de animación después de un tiempo
       setTimeout(() => {
@@ -158,7 +179,10 @@ function posicionarObjetivo() {
 
   
       // Reiniciar posición del jugador
-      posicionarJugador();
+      posicionarJugador()
+      .then(() => {
+        console.log('El Jugador se ha posicionado correctamente.');
+      });
   
       // Reiniciar posición del objetivo
       posicionarObjetivo();
